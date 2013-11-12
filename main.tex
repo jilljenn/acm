@@ -1,0 +1,36 @@
+%!TEX TS-program = latex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{book}
+\usepackage[a5paper,margin=2cm]{geometry}
+\usepackage[french]{babel}
+\usepackage{amssymb,amsthm,amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{stmaryrd}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper,landscape]
+\usepackage{listings}
+\lstset{
+	extendedchars=false,
+	showstringspaces=false,
+	escapeinside=``,
+	keywordstyle=\color{blue},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	columns=flexible,
+	language=C++,
+	tabsize=4,
+	basicstyle=\ttfamily,
+	numbers=left,
+	frame=lines
+}
+
+\begin{document}
+\title{ACM Cookbook}
+\author{Stéphane Henriot \and Étienne Simon \and Jill-Jênn Vie}
+\vspace{5cm}
+\maketitle
+\chapter{Code}
+\section{Tableaux de suffixes}
+Temps de cuisson : $O(n \log^2 n)$
+{\tiny\lstinputlisting{code/suffix.cpp}}
+\end{document}

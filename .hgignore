@@ -1,0 +1,7 @@
+syntax: glob
+
+*.aux
+*.dvi
+*.log
+*.pdf
+*.gz
