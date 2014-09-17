@@ -1,15 +1,15 @@
-%!TEX TS-program = latex
+%!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt]{book}
+\documentclass[12pt]{article}
 \usepackage[a5paper,margin=2cm]{geometry}
 \usepackage[french]{babel}
 \usepackage{amssymb,amsthm,amsmath}
-\usepackage[utf8]{inputenc}
+\usepackage{xltxtra}
 \usepackage{stmaryrd}
-\usepackage{pgfpages}
-\pgfpagesuselayout{2 on 1}[a4paper,landscape]
+\usepackage{graphicx}
 \usepackage{listings}
+\usepackage{color}
 \lstset{
 	extendedchars=false,
 	showstringspaces=false,
@@ -25,99 +25,101 @@
 }
 
 \begin{document}
-\title{ACM Cookbook}
-\author{Stéphane Henriot \and Étienne Simon \and Jill-Jênn Vie}
-\vspace{5cm}
-\maketitle
-\chapter{Algorithmique du texte}
+\tableofcontents\vspace{0.5cm}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{np.jpg}
+\end{center}
 
-\section{Tableaux de suffixes}
+%\chapter{ACM Cookbook}
+\section{Algorithmique du texte}
+
+\subsection{Tableaux de suffixes}
 Temps de cuisson : $O(n \log^2 n)$
-{\tiny\lstinputlisting{code/suffix.cpp}}
+{\scriptsize\lstinputlisting{code/suffix.cpp}}
 
-\section{Knuth-Morris-Pratt}
+\subsection{Knuth-Morris-Pratt}
 Temps de cuisson : $O(n)$
-{\tiny\lstinputlisting{code/kmp.cpp}}
+{\scriptsize\lstinputlisting{code/kmp.cpp}}
 
-\chapter{Optimisation}
+\section{Optimisation}
 
-\section{Sparse max-flow (C++)}
-{\tiny\lstinputlisting{code/Dinic.cc}}
+\subsection{Sparse max-flow}
+{\scriptsize\lstinputlisting{code/Dinic.cc}}
 
-\section{Min-cost max-flow (C++)}
-{\tiny\lstinputlisting{code/MinCostMaxFlow.cc}}
+\subsection{Min-cost max-flow}
+{\scriptsize\lstinputlisting{code/MinCostMaxFlow.cc}}
 
-\section{Push-relabel max-flow (C++)}
-{\tiny\lstinputlisting{code/PushRelabel.cc}}
+\subsection{Push-relabel max-flow}
+{\scriptsize\lstinputlisting{code/PushRelabel.cc}}
 
-\section{Min-cost matching (C++)}
-{\tiny\lstinputlisting{code/MinCostMatching.cc}}
+\subsection{Min-cost matching}
+{\scriptsize\lstinputlisting{code/MinCostMatching.cc}}
 
-\section{Max bipartite matching (C++)}
-{\tiny\lstinputlisting{code/MaxBipartiteMatching.cc}}
+\subsection{Max bipartite matching}
+{\scriptsize\lstinputlisting{code/MaxBipartiteMatching.cc}}
 
-\section{Global min cut (C++)}
-{\tiny\lstinputlisting{code/MinCut.cc}}
+\subsection{Global min cut}
+{\scriptsize\lstinputlisting{code/MinCut.cc}}
 
-\chapter{Géométrie}
+\section{Géométrie}
 
-\section{Convex hull (C++)}
-{\tiny\lstinputlisting{code/ConvexHull.cc}}
+\subsection{Convex hull}
+{\scriptsize\lstinputlisting{code/ConvexHull.cc}}
 
-\section{Miscellaneous geometry (C++)}
-{\tiny\lstinputlisting{code/Geometry.cc}}
+\subsection{Miscellaneous geometry}
+{\scriptsize\lstinputlisting{code/Geometry.cc}}
 
-\section{Slow Delaunay triangulation (C++)}
-{\tiny\lstinputlisting{code/Delaunay.cc}}
+\subsection{Slow Delaunay triangulation}
+{\scriptsize\lstinputlisting{code/Delaunay.cc}}
 
-\chapter{Algorithmes numériques}
+\section{Algorithmes numériques}
 
-\section{Number theoretic algorithms (modular, Chinese remainder, linear Diophantine) (C++)}
-{\tiny\lstinputlisting{code/Euclid.cc}}
+\subsection{Number theoretic algorithms (modular, Chinese remainder, linear Diophantine)}
+{\scriptsize\lstinputlisting{code/Euclid.cc}}
 
-\section{Systems of linear equations, matrix inverse, determinant (C++)}
-{\tiny\lstinputlisting{code/GaussJordan.cc}}
+\subsection{Systems of linear equations, matrix inverse, determinant}
+{\scriptsize\lstinputlisting{code/GaussJordan.cc}}
 
-\section{Reduced row echelon form, matrix rank (C++)}
-{\tiny\lstinputlisting{code/ReducedRowEchelonForm.cc}}
+\subsection{Reduced row echelon form, matrix rank}
+{\scriptsize\lstinputlisting{code/ReducedRowEchelonForm.cc}}
 
-\section{Fast Fourier transform (C++)}
-{\tiny\lstinputlisting{code/FFT_new.cc}}
+\subsection{Fast Fourier transform}
+{\scriptsize\lstinputlisting{code/FFT_new.cc}}
 
-\section{Simplex algorithm (C++)}
-{\tiny\lstinputlisting{code/Simplex.cc}}
+\subsection{Simplex algorithm}
+{\scriptsize\lstinputlisting{code/Simplex.cc}}
 
-\chapter{Graphes}
+\section{Graphes}
 
-\section{Fast Dijkstra's algorithm (C++)}
-{\tiny\lstinputlisting{code/FastDijkstra.cc}}
+\subsection{Fast Dijkstra's algorithm}
+{\scriptsize\lstinputlisting{code/FastDijkstra.cc}}
 
-\section{Strongly connected components (C)}
-{\tiny\lstinputlisting{code/SCC.cc}}
+\subsection{Strongly connected components}
+{\scriptsize\lstinputlisting{code/SCC.cc}}
 
-\chapter{Structures de données}
+\section{Structures de données}
 
-\section{Suffix arrays (C++)}
-{\tiny\lstinputlisting{code/SuffixArray.cc}}
+\subsection{Suffix arrays}
+{\scriptsize\lstinputlisting{code/SuffixArray.cc}}
 
-\section{Binary Indexed Tree}
-{\tiny\lstinputlisting{code/BIT.cc}}
+\subsection{Binary Indexed Tree}
+{\scriptsize\lstinputlisting{code/BIT.cc}}
 
-\section{Union-Find Set (C/C++)}
-{\tiny\lstinputlisting{code/UnionFind.cc}}
+\subsection{Union-Find Set}
+{\scriptsize\lstinputlisting{code/UnionFind.cc}}
 
-\section{KD-tree (C++)}
-{\tiny\lstinputlisting{code/KDtree.cc}}
+\subsection{KD-tree}
+{\scriptsize\lstinputlisting{code/KDtree.cc}}
 
-\chapter{Divers}
+\section{Divers}
 
-\section{Longest increasing subsequence (C++)}
-{\tiny\lstinputlisting{code/LongestIncreasingSubsequence.cc}}
+\subsection{Longest increasing subsequence}
+{\scriptsize\lstinputlisting{code/LongestIncreasingSubsequence.cc}}
 
-\section{Dates (C++)}
-{\tiny\lstinputlisting{code/Dates.cc}}
+\subsection{Dates}
+{\scriptsize\lstinputlisting{code/Dates.cc}}
 
-\section{Prime numbers (C++)}
-{\tiny\lstinputlisting{code/Primes.cc}}
+\subsection{Prime numbers}
+{\scriptsize\lstinputlisting{code/Primes.cc}}
 
 \end{document}
