@@ -1,0 +1,53 @@
+% http://uva.onlinejudge.org/external/4/485.html
+
+\problem{Find the Twin}
+
+You are given a list of words. Find out if there's a double.
+
+\subsection*{Input}
+
+An integer $T$, followed by $T$ cases of the following form:
+\begin{itemize}
+\item An integer $N$
+\item On the next $N$ lines, a word.
+\end{itemize}
+
+\subsection*{Output}
+
+For each instance you must output one of the following answers:
+
+\begin{verbatim}
+Case #d: None
+Case #d: NAME.
+\end{verbatim}
+
+Where \texttt{d} stands for the instance number (starting from 1) and NAME is the lowest twin in lexicographical order.
+
+\subsection*{Sample Input}
+
+\begin{verbatim}
+3
+1
+Alice
+2
+Bob
+Bob
+3
+Charles
+Damien
+Etienne
+4
+Frederic
+Fanja
+Fanja
+Frederic
+\end{verbatim}
+
+\subsection*{Sample Output}
+
+\begin{verbatim}
+Case #1: None
+Case #2: Bob
+Case #3: None
+Case #4: Fanja
+\end{verbatim}
