@@ -1,6 +1,9 @@
 /* c.durr - jill-jênn vie - préparation ACM/ICPC/SWERC 2014
     Pascal triangle of death
-    grands entiers, doivent être codée par tableau de caractères.
+    UVA 485
+    http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=426
+    
+    grands entiers, doivent être codés par tableau de caractères.
     derniere ligne n satisfait
        2^n > (n choose n/2) >= 10**60 =~= 2**200 
        pour être précis il a y 205 éléments dans la dernière ligne.
