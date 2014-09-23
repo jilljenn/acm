@@ -1,0 +1,38 @@
+\ProvidesPackage{tp}
+\RequirePackage[margin=2cm,top=3cm,a4paper]{geometry}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tikz}
+\RequirePackage{amssymb,amsmath}
+\RequirePackage{listings}
+\RequirePackage{array}
+\RequirePackage{color}
+\RequirePackage{url}
+\RequirePackage{fancyhdr}
+\lstset{
+	extendedchars=false,
+	showstringspaces=false,
+	escapeinside=``,
+	keywordstyle=\color{blue},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	columns=flexible,
+	language=caml,
+	tabsize=2,
+	basicstyle=\ttfamily,
+	frame=lines
+}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L,R]{\LARGE Problem \Alph{section}}
+\fancyhead[C]{\LARGE \bfseries \rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand\footrulewidth{0.4 pt}
+\newcommand{\problem}[1]{%
+	\clearpage
+	\sectionmark{#1}
+	\stepcounter{section}}
+
+\newcounter{problem}

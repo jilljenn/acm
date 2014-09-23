@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{tp}
+
+\title{Préparation au concours ACM -- TP 1}
+\author{Christoph Dürr \and Jill-Jênn Vie}
+
+\begin{document}
+\maketitle
+\subsection*{Problems}
+
+All written contest materials will be in English.
+
+Solutions to problems submitted for judging are called runs. Each run is judged as accepted or rejected, and the team is notified of the results. Rejected runs will be marked as follows:
+\begin{itemize}
+\item Compilation Error
+\item Wrong Answer
+\item Time Limit Exceeded
+\item Presentation Error (lack of newline, unwanted spaces, etc.)
+\item Runtime Error (most possibly a segmentation fault)
+\end{itemize}
+
+\subsection*{Scoring}
+
+Teams will be ranked by number of solved problems. In case of a tie, teams with less total submission time are ranked first. For each solved problem, the time (in minutes) since contest start will be added to the team's total time. For each wrong submission prior to the successful one, 20 penalty minutes are added.
+
+\subsection*{Material}
+
+Each team will be permitted to provide a PDF of up to 25 pages of notes within the limits described during Team Certification. Three copies will be printed and placed at the team's workstation for use during the World Finals.
+
+Each team member may bring one printed, unannotated natural language dictionary. You may bring mascots such as stuffed toy animals or party hats.
+
+\subsection*{Computer}
+
+The keyboards will have Portuguese layout, but teams may bring their own USB-keyboard.
+
+The command line for compiling used in the automated judge system is the following:\\
+\texttt{g++ -w -O3 -pipe \$SOURCE}
+
+\subsection*{Links}
+
+You need to create an account on \url{http://uva.onlinejudge.org} to submit your codes. 
+
+For a few problems, you can get the output of any input on \url{uvatoolkit.com}.
+
+\input{problems/favorite-number.tex}
+\input{problems/mean-value.tex}
+\input{problems/find-the-twin.tex}
+\input{problems/485-pascal-triangle-of-death.tex}
+\input{problems/10189-minesweeper.tex}
+\input{problems/10298-power-strings.tex}
+\input{problems/12546-lcm-pair-sum.tex}
+
+\end{document}
