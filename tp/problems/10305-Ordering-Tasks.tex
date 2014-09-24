@@ -1,0 +1,48 @@
+\problem{Ordering Tasks}
+
+
+\noindent
+UVA \no 10305\bigskip
+
+\subsection*{The Problem}
+
+
+
+John has n tasks to do.
+Unfortunately, the tasks are not independent and the execution of one task is only
+possible if other tasks have already been executed. 
+
+
+\subsection*{The Input}
+
+The input will consist of several instances of
+the problem. Each instance begins with a line containing two integers, $1\leq n\leq 100$ and $m$. $n$
+is the number of tasks (numbered from 1
+to $n$) and $m$ is the number of direct precedence relations between tasks. After
+this, there will be $m$ lines with two
+integers $i$ and $j$, representing the fact that task $i$ must be executed before task $j$.
+An instance with $n = m = 0$ will
+finish the input. 
+
+
+\subsection*{The Output}
+
+For each instance,
+print a line with $n$ integers representing the tasks in a possible order of execution.
+
+
+
+\subsection*{Sample Input}
+\begin{verbatim}
+5 4
+1 2
+2 3
+1 3
+1 5
+0 0
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+1 4 2 5 3
+\end{verbatim}
