@@ -1,0 +1,10 @@
+syntax: glob
+
+.DS_Store
+*.aux
+*.dvi
+*.log
+*.pdf
+*.gz
+*.toc
+*.png

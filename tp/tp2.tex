@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage{tp}
+
+\title{Préparation au concours ACM -- TP 2}
+\author{Christoph Dürr \and Jill-Jênn Vie}
+\date{September 25, 2014}
+
+\begin{document}
+\maketitle
+\subsection*{Quelques conseils}
+
+\begin{itemize}
+\item Entraînez-vous à identifier les problèmes les plus faciles.
+\item Lisez bien les contraintes d'affichage : faut-il un retour de ligne entre deux instances consécutives ou même à la fin ? Y a-t-il des deux-points, ou des points à la fin des phrases ?
+\item Pensez aux cas extrêmes : que se passe-t-il lorsque le graphe est vide ? Lorsqu'il n'y a aucune instance ? Lorsque les entiers donnés en entrée sont négatifs ? Il peut être utile qu'un membre de votre équipe rédige des tests unitaires.
+\item Aussi, pensez aux bornes sur les entiers : faut-il un \texttt{unsigned long long int} (\texttt{\%lld}) ?
+\item Évaluez la complexité de votre idée d'algorithme avant de l'implémenter.
+\item Attention à la mémoire : évitez d'utiliser \texttt{malloc} mais plutôt des instructions de type \texttt{vector<bool> dejaVu(nbNodes)}, ou n'hésitez pas à faire un tableau de taille suffisamment grande pour accueillir les instances lorsque les contraintes le permettent, quitte à ce que ce soit une variable globale.
+\item S'il y a plusieurs instances, pensez à réinitialiser toutes les données à chaque nouvelle lecture, notamment si vous utilisez des variables globales.
+\item Évitez d'utiliser des classes, éventuellement recodez vos propres structures si vous ne voulez pas utiliser \texttt{pair<int, int>} ou \texttt{tuple}. Un exemple d'implémentation minimale pour accueillir un graphe pondéré :
+\begin{verbatim}
+struct Node {
+    int id;
+    vector<pair<int, int> > neighbours;
+};
+vector<Node> graph(nb_nodes);
+\end{verbatim}
+\item Lorsque vous effectuez des comparaisons entre flottants, songez à conserver une tolérance de \texttt{1e-6}.
+\end{itemize}
+
+\input{problems/100-The3n+1problem.tex}
+\input{problems/10116-robot-motion.tex}
+\input{problems/195-Anagram.tex}
+\input{problems/10305-Ordering-Tasks.tex}
+\input{problems/12544-beehives.tex}
+
+\end{document}
